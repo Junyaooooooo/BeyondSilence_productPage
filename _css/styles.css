@@ -1,0 +1,539 @@
+@charset "UTF-8";
+
+/* CSS Document */
+/*****************************************************
+GENERAL STYLES
+/*****************************************************
+MARGIN PADDING RESET
+******************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****************************************************
+HIGHLIGHTS
+******************************************************/
+::selection {
+    background: #534613;
+    /* WebKit/Blink Browsers */
+}
+
+mark {
+    background: #534613;
+    color: white;
+}
+
+/*****************************************************
+GENERAL
+******************************************************/
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    background-position: center, center;
+    background-attachment: fixed;
+
+    /* THIS IS THE BASE TYPE SIZE FOR THE WHOLE PAGE*/
+    font-size: 16px;
+}
+
+section {
+    width: 100vw;
+}
+
+/*****************************************************
+GENERAL TYPOGRAPHY
+******************************************************/
+.text_section {
+    background-color: white;
+    padding: 100px 0 100px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.textbox {
+    margin: 0 auto;
+}
+
+.thickdivider {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.thindivider {
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/****************************************************
+LINE SPACING (LEADING) 
+*****************************************************/
+.more_linespace {
+    line-height: 1.5;
+}
+
+.double_linespace {
+    line-height: 2;
+}
+
+.triple_linespace {
+    line-height: 3;
+}
+
+/*****************************************************
+FIXED LOGO BUTTON (TOP LEFT)
+******************************************************/
+#fixed_button {
+    width: 50px;
+    height: 50px;
+    background-color: #534613;
+    border-radius: 50px;
+    position: fixed;
+    left: 25px;
+    top: 12px;
+    background-image: url(../_assets/_images/Star.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    z-index: 9999;
+
+    /* HOVER TRANSITION */
+    transition: all .5s ease;
+}
+
+#fixed_button:hover {
+    background-color: blue;
+    background-image: url(../_assets/_images/Star_hover.png);
+}
+
+/*****************************************************
+HEADER & NAV
+******************************************************/
+header {
+    width: 100%;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /* FLEX */
+    display: flex;
+    align-content: flex-start;
+    color: white;
+}
+
+.header_column {
+    width: 33.333%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #F2C928;
+}
+
+.googlemark {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .3em;
+    font-size: 1.2em;
+}
+
+.googlemark:hover {
+    color: #F2C928;
+}
+
+nav {
+    /* FLEX */
+    display: flex;
+    align-content: space-between;
+}
+
+.navbutton {
+    width: 33.333%;
+    text-align: center;
+}
+
+.navbutton a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+
+.navbutton a:hover {
+    color: #F2C928;
+}
+
+.designedby {
+    text-align: right;
+    font-size: .9em;
+}
+
+/*****************************************************
+FEATURE SECTION
+******************************************************/
+.feature {
+    height: 100vh;
+    background-image: url(../_assets/_images/title_beyondSilence.svg), url(../_assets/_images/Cover_Page.png);
+    background-position: center, center;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+/*****************************************************
+LARGE TEXTBOX SECTION
+******************************************************/
+.large_textbox {
+    height: 100vh;
+    background-color: white;
+    padding: 25px;
+    padding-left: 8%;
+}
+
+.large_text {
+    font-size: 3em;
+    font-weight: bold;
+    padding-right: 30px;
+    position: relative;
+}
+
+.largetext_wrap {
+    width: 95%;
+    /* This is set to keep the paragraph centered 
+    vertically inside the container*/
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/*****************************************************
+ICONS
+******************************************************/
+.icons_section {
+    height: 80vh;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons_container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+
+    /* FLEX */
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon_box p {
+    width: 250px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.one {
+    background-image: url(../_assets/_images/Star.png);
+}
+
+.two {
+    background-image: url(../_assets/_images/Star.png);
+}
+
+.three {
+    background-image: url(../_assets/_images/Star.png);
+}
+
+/*****************************************************
+Imag
+******************************************************/
+.image_section {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    /* 上方空间 */
+    padding-bottom: 60px;
+    /* Vertically stack the rows */
+    gap: 60px;
+    min-height: 500px; 
+}
+
+.image_row {
+    display: flex;
+    justify-content: center;
+    /* Distribute images evenly */
+    gap: 60px;
+    /* Space between images */
+    width: 80%;
+}
+
+.image_row img {
+    width: 30%;
+    /* Set each image to take up 1/3 of the row */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure the image fills the space without distortion */
+}
+
+
+
+/*****************************************************
+SPLIT IN TWO SECTION
+******************************************************/
+.splitintwo {
+    display: flex;
+    background-color: #534613;
+    align-items: flex-start;
+    /* Ensure children align to the top */
+}
+
+.splitintwo ::selection {
+    background: black;
+    color: white;
+}
+
+.halfcolumn_left,
+.halfcolumn_right {
+    width: 50%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Ensure content starts at the top */
+}
+
+.halfcolumn_left {
+    background-image: url(../_assets/_images/Storyboard.png);
+    /* Replace with your actual image path */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ensures the image covers the entire column, even if cropped */
+    background-position: center;
+    /* Centers the image */
+    width: 50%;
+    /* Makes sure it covers the column width */
+    height: 100vh;
+    /* Makes it span the full viewport height */
+    flex-grow: 1;
+    /* Ensures the column grows properly with the layout */
+}
+
+
+.halfcolumn_text {
+    width: 80%;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.8;
+    /* Allow text container to grow with content */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.halfcolumn_text mark {
+    background-color: black;
+}
+
+
+/*****************************************************
+HEADING + PARAGRAPH SECTION
+******************************************************/
+.fulltextbox {
+    width: 100%;
+}
+
+.bigtextbox {
+    width: 75%;
+}
+
+.smalltextbox {
+    width: 80%;
+    max-width: 1200px;
+}
+
+.text_section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.text_section h2 {
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.text_section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.text_section h4 {
+    width: 40%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* image section */
+.image_section1 {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    height: 500px;
+    /* Ensure the section has enough height */
+}
+
+.image_section1 h1 {
+    color: black;
+    font-size: 42px;
+    letter-spacing: .05em;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.image_container {
+    width: 100%;
+    /* Ensure it takes up full width */
+    height: 300px;
+    /* Specify a height */
+    padding: 50px;
+    background-image: url("../_assets/_images/character_design.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* image section */
+.image_section2 {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    height: 500px;
+    /* Ensure the section has enough height */
+}
+
+.image_section2 h1 {
+    color:#000;
+    font-size: 42px;
+    letter-spacing: .05em;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.image_container2 {
+    width: 100%;
+    /* Ensure it takes up full width */
+    height: 500px;
+    /* Specify a height */
+    padding: 50px;
+    background-image: url("../_assets/_images/sprite_design.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* mockup */
+.mockup_section {
+    display: flex;
+    background-color: #534613;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mockup_container {
+    width: 100%;
+    height: 650px;
+    /* 给容器设置一个明确的高度 */
+    background-image: url(../_assets/_images/mockup.png);
+    background-size: 60%;
+    /* 让背景图片覆盖整个容器 */
+    background-position: center;
+    /* 将背景图片居中 */
+    background-repeat: no-repeat;
+}
+
+
+/*****************************************************
+FOOTER
+******************************************************/
+.footer_section {
+    background-color: #534613;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../_assets/_images/Star.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 98% 88%;
+}
+
+.footer_section .textbox {
+    width: 80%;
+    max-width: 1200px;
+    min-width: 800px;
+    padding: 100px 0 50px 20px;
+}
+
+.footer_section .textbox .copyright {
+    color: #888888;
+    line-height: 1.5;
+    letter-spacing: .08em;
+
+    margin-top: 200px;
+    letter-spacing: .2em;
+    font-weight: 400;
+}
+
+.footer_section .textbox a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.5;
+    letter-spacing: .09em;
+
+    transition: all .4s ease;
+}
+
+.footer_section .textbox a:hover {
+    color: #534613;
+}
